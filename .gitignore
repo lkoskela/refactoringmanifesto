@@ -1,5 +1,6 @@
-Gemfile.lock
-db/*
+db/*.sqlite
+db/*.db
+db/*.sqlite3
 *.log
 tmp/*
 

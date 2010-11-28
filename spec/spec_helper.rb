@@ -13,3 +13,14 @@ set :environment, :test
 set :run, false
 set :raise_errors, true
 set :logging, false
+
+RSpec.configure do |config|
+  config.before(:all) {}
+  config.before(:each) {
+    DataMapper.setup(:default, "sqlite3::memory:")
+    DataMapper.auto_migrate!
+  }
+  config.after(:all) {}
+  config.after(:each) {}
+end
+
