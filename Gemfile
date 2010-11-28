@@ -1,8 +1,10 @@
-# testing stuff
-gem 'rack-test', :group => :test
-gem 'rspec', :group => :test
+source :rubygems
 
-# web framework stuff
+group :test do
+  gem 'rack-test'
+  gem 'rspec'
+end
+
 gem 'sinatra', :git => 'git://github.com/sinatra/sinatra.git'
 gem 'dm-core'
 gem 'dm-sqlite-adapter'

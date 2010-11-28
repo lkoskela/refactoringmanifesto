@@ -10,9 +10,10 @@ require 'dm-migrations'
 require File.join(File.dirname(__FILE__), 'lib/manifesto.rb')
 require File.join(File.dirname(__FILE__), 'lib/signatory.rb')
 
-#DataMapper.setup(:default, "sqlite3::memory:")
-puts "USING DATABASE AT #{File.join(Dir.pwd, 'db/manifesto.db')}"
 DataMapper.setup(:default, "sqlite3://#{File.join(Dir.pwd, 'db/manifesto.db')}")
+configure :test do
+  DataMapper.setup(:default, "sqlite3::memory:")
+end
 
 DataMapper.finalize
 Signatory.auto_migrate! unless Signatory.storage_exists?
