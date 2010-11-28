@@ -1,0 +1,30 @@
+-
+    commandment: "Make your products live longer!"
+    explanation: "Refactoring means taking the opportunity to keep your product alive. Don't ditch it, stitch it! Don't end it, mend it! Refactoring is not a needless cost. It is anti-needless complexity that prevents change."
+-
+    commandment: "Design should be simple so that it is easy to refactor."
+    explanation: "Product designers: Make your products easy to change. Write clean, understandable code. Consumers: Buy products that are continuously refactored, or else find out why the developers didn't do that. Be critical and inquisitive."
+-
+    commandment: "Refactoring is not rewriting."
+    explanation: "Rewriting is throwing away the broken bit. This is NOT the kind of refactoring that we're talking about."
+-
+    commandment: "What doesn't kill it makes it stronger."
+    explanation: "Every time we refactor code, we add to its potential, its history, its soul and its inherent beauty."
+-
+    commandment: "Refactoring is a creative challenge."
+    explanation: "Refactoring is good for the imagination. Using new techniques, tools and materials ushers in possibility rather than dead ends."
+-
+    commandment: "Refactoring survives fashion."
+    explanation: "Refactoring is not about styling or trends. There are no due-dates for code."
+-
+    commandment: "To refactor is to discover."
+    explanation: "As you refactor objects, you'll learn amazing things about how they actually work. Or don't work."
+-
+    commandment: "Refactor – even in good times!"
+    explanation: "If you think this manifesto has to do with the recession, forget it. This isn't about money, it's about a mentality."
+-
+    commandment: "Refactoring is about independence."
+    explanation: "Don't be a slave to legacy code – be its master. If it's broken, refactor it and make it better. And if you're a master, empower others."
+-
+    commandment: "You can refactor anything, even total crap."
+    explanation: "But we'd recommend avoiding total crap. Refactoring stops code from becoming crap."

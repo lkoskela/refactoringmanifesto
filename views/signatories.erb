@@ -1,0 +1,25 @@
+<div id="signing">
+	<div class="callToAction">
+		Stop Recycling. Start Repairing.
+	</div>
+	<div class="callToSignUp">
+		To date, a total of <%= @signatories.size %> people have signed this manifesto. We have done so to voice our concern over the state of practice and our passion towards the profession of software development. We want to feel proud of our work and see our products stand the test of time, serving their users and developers alike.
+	</div>
+	<div class="signUpForm">
+		<form method="POST" action="">
+			<input class="text" type="text" name="name" placeholder="enter your name to sign the manifesto" /> <input type="button" name="sign" value="sign!" id="sign_button" />
+		</form>
+		<% if @added %>
+		<div class="uxFeedback">Thanks for joining us. Your name, '<%= @added %>' will be listed among our signatories shortly.</div>
+		<% end %>
+	</div>
+</div>
+<div id="signatories">
+	<h2>The following people have signed this manifesto:</h2>
+	<ol class="signatories">
+		<% @signatories.each do |s| %>
+		<li><span class="signatoryName"><%= s.name %></span> <span class="signatoryDate">signed on <%= s.created_at.strftime('%B %d, %Y') %></span></li>
+		<% end %>
+	</ol>
+	<a class="backToTop" href="#top">Back to top</a>
+</div>

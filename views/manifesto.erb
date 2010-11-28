@@ -1,0 +1,15 @@
+<div id="manifesto">
+	<ol class="commandments">
+		<% @manifesto.each do |entry| %>
+		<li><span class="commandment"><%= entry['commandment'] %></span> <span class="explanation"><%= entry['explanation'] %></span></li>
+		<% end %>
+	</ol>
+	<div class="callToAction">
+		Stop Rewriting. Start Refactoring.
+	</div>
+</div>
+<div id="signing">
+	<div class="callToSignUp">
+		To date, a total of <%= @number_of_signatories %> people have signed this manifesto. We have done so to voice our concern over the state of practice and our passion towards the profession of software development. We want to feel proud of our work and see our products stand the test of time, serving their users and developers alike. <a class="signUpLink" href="signatories">Join us!</a>
+	</div>
+</div>

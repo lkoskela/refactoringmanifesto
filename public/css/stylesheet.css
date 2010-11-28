@@ -1,0 +1,92 @@
+@font-face {
+	font-family: 'Puritan20Normal';
+	src: url('../fonts/Puritan_Regular-webfont.eot');
+	src: local('☺'), url('../fonts/Puritan_Regular-webfont.ttf') format('truetype'), url('../fonts/Puritan_Regular-webfont.svg#webfontn5eLr9nM') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Puritan20Italic';
+	src: url('../fonts/Puritan_Italic-webfont.eot');
+	src: local('☺'), url('../fonts/Puritan_Italic-webfont.ttf') format('truetype'), url('../fonts/Puritan_Italic-webfont.svg#webfontXxrBxCK2') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Puritan20Bold';
+	src: url('../fonts/Puritan_Bold-webfont.eot');
+	src: local('☺'), url('../fonts/Puritan_Bold-webfont.ttf') format('truetype'), url('../fonts/Puritan_Bold-webfont.svg#webfontQVg1lsf2') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Puritan20BoldItalic';
+	src: url('../fonts/Puritan_Bold_Italic-webfont.eot');
+	src: local('☺'), url('../fonts/Puritan_Bold_Italic-webfont.ttf') format('truetype'), url('../fonts/Puritan_Bold_Italic-webfont.svg#webfonti78q8y8X') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DanielRegular';
+	src: url('../fonts/daniel-webfont.eot');
+	src: local('☺'), url('../fonts/daniel-webfont.ttf') format('truetype'), url('../fonts/daniel-webfont.svg#webfontiJ7CsAOH') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DanielBold';
+	src: url('../fonts/danielbd-webfont.eot');
+	src: local('☺'), url('../fonts/danielbd-webfont.ttf') format('truetype'), url('../fonts/danielbd-webfont.svg#webfontyPrNjpuS') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'DanielBlackRegular';
+	src: url('../fonts/danielbk-webfont.eot');
+	src: local('☺'), url('../fonts/danielbk-webfont.ttf') format('truetype'), url('../fonts/danielbk-webfont.svg#webfontvV4nGRe6') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Regular CSS styles from now on... */
+
+#content {
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:80px;
+	margin-bottom:120px;
+	font-family: 'Puritan20Normal', Arial, sans-serif;
+}
+
+/* Orphan styles that smell like they need... REFACTORING! */
+.callToAction {font:18px/27px 'Puritan20Bold', Arial, sans-serif; color: red;}
+#signing {position:relative;margin-top: 50px;margin-bottom: 60px;font:18px/24px 'Puritan20Normal', Arial, sans-serif;}
+#signing .callToSignUp {color:black;float:left;margin-top:50px;margin-bottom:100px;}
+#signing .callToSignUp a.signUpLink {font-weight:bold;}
+
+/* Page template */
+h1.title {font: 60px/68px 'Puritan20Bold', Arial, sans-serif;letter-spacing:-1.3pt;position:relative;}
+h1.title .tagline {color:red;font: 16px/18px 'Puritan20Normal', Arial, sans-serif;letter-spacing: 1pt;position:absolute;bottom:-2px;right:20px;}
+.title a {text-decoration:none;color:black;}
+
+/* Manifesto */
+ol.commandments {font: 24px/28px 'Puritan20Bold', Arial, sans-serif;}
+.commandments li {margin: 20px 0px 12px 0px;}
+.commandments li .explanation {display:block;font: 18px/20px 'Puritan20Bold', Arial, sans-serif;margin-top:8px;}
+.commandments li .commandment {display:block;}
+.commandments b {font-family: 'Puritan20Normal', Arial, sans-serif; font-weight: normal;}
+
+/* Signatories */
+#signing .signUpForm {clear:both;position:relative;float:left;margin-top:30px;}
+#signing input {font:18px/24px 'Puritan20Normal', Arial, sans-serif;}
+#signing input.text {width: 400px;}
+#signatories {clear:both;float:left;margin-top:50px;}
+#signatories li {font:18px/20px 'DanielRegular', Arial, sans-serif;}
+#signatories .backToTop {display:block;margin-bottom:120px;}
