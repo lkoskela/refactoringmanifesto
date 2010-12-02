@@ -4,6 +4,8 @@ source "http://gems.github.com"
 group :test do
   gem 'rack-test'
   gem 'rspec'
+  gem 'rcov'
+  gem 'fuubar'
 end
 
 gem 'sinatra'  #, :git => 'git://github.com/sinatra/sinatra.git'

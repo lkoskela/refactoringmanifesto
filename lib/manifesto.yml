@@ -15,13 +15,13 @@
     explanation: "Refactoring is good for the imagination. Using new techniques, tools and materials ushers in possibility rather than dead ends."
 -
     commandment: "Refactoring survives fashion."
-    explanation: "Refactoring is not about styling or trends. There are no due-dates for code."
+    explanation: "Refactoring is not about styling or trends. There are no due-dates on continuously refactored code."
 -
     commandment: "To refactor is to discover."
     explanation: "As you refactor objects, you'll learn amazing things about how they actually work. Or don't work."
 -
-    commandment: "Refactor – even in good times!"
-    explanation: "If you think this manifesto has to do with the recession, forget it. This isn't about money, it's about a mentality."
+    commandment: "Refactor – even in bad times!"
+    explanation: "If you think this manifesto is not relevant during recession, forget it. This isn't about effort, it's about mentality."
 -
     commandment: "Refactoring is about independence."
     explanation: "Don't be a slave to legacy code – be its master. If it's broken, refactor it and make it better. And if you're a master, empower others."

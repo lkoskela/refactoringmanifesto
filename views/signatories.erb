@@ -7,7 +7,7 @@
 	</div>
 	<div class="signUpForm">
 		<form method="POST" action="">
-			<input class="text" type="text" name="name" placeholder="enter your name to sign the manifesto" /> <input type="button" name="sign" value="sign!" id="sign_button" />
+			<input class="text" type="text" name="name" placeholder="enter your name to sign the manifesto" autofocus="true" /> <input type="button" name="sign" value="sign!" id="sign_button" />
 		</form>
 		<% if @added %>
 		<div class="uxFeedback">Thanks for joining us. Your name, '<%= @added %>' will be listed among our signatories shortly.</div>
