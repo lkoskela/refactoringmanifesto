@@ -7,14 +7,6 @@
 }
 
 @font-face {
-	font-family: 'Puritan20Italic';
-	src: url('../fonts/Puritan_Italic-webfont.eot');
-	src: local('☺'), url('../fonts/Puritan_Italic-webfont.ttf') format('truetype'), url('../fonts/Puritan_Italic-webfont.svg#webfontXxrBxCK2') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'Puritan20Bold';
 	src: url('../fonts/Puritan_Bold-webfont.eot');
 	src: local('☺'), url('../fonts/Puritan_Bold-webfont.ttf') format('truetype'), url('../fonts/Puritan_Bold-webfont.svg#webfontQVg1lsf2') format('svg');
@@ -23,33 +15,9 @@
 }
 
 @font-face {
-	font-family: 'Puritan20BoldItalic';
-	src: url('../fonts/Puritan_Bold_Italic-webfont.eot');
-	src: local('☺'), url('../fonts/Puritan_Bold_Italic-webfont.ttf') format('truetype'), url('../fonts/Puritan_Bold_Italic-webfont.svg#webfonti78q8y8X') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
 	font-family: 'DanielRegular';
 	src: url('../fonts/daniel-webfont.eot');
 	src: local('☺'), url('../fonts/daniel-webfont.ttf') format('truetype'), url('../fonts/daniel-webfont.svg#webfontiJ7CsAOH') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'DanielBold';
-	src: url('../fonts/danielbd-webfont.eot');
-	src: local('☺'), url('../fonts/danielbd-webfont.ttf') format('truetype'), url('../fonts/danielbd-webfont.svg#webfontyPrNjpuS') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'DanielBlackRegular';
-	src: url('../fonts/danielbk-webfont.eot');
-	src: local('☺'), url('../fonts/danielbk-webfont.ttf') format('truetype'), url('../fonts/danielbk-webfont.svg#webfontvV4nGRe6') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
