@@ -34,14 +34,18 @@
 }
 
 /* Orphan styles that smell like they need... REFACTORING! */
-.callToAction {font:18px/27px 'Puritan20Bold', Arial, sans-serif; color: red;}
+.callToAction {font:18px/27px 'Puritan20Bold', Arial, sans-serif; color: red; float:left;}
 #signing {position:relative;margin-top: 50px;margin-bottom: 60px;font:18px/24px 'Puritan20Normal', Arial, sans-serif;}
 #signing .callToSignUp {color:black;float:left;margin-top:50px;margin-bottom:100px;}
 #signing .callToSignUp a.signUpLink {font-weight:bold;}
 
+/* Authors */
+#authors {font: 16/20px 'DanielRegular', Arial, sans-serif;clear:both;}
+#authors li {display:block;float:right;margin-right:30px;white-space:nowrap;}
+
 /* Page template */
 h1.title {font: 60px/68px 'Puritan20Bold', Arial, sans-serif;letter-spacing:-1.3pt;position:relative;}
-h1.title .tagline {color:red;font: 16px/18px 'Puritan20Normal', Arial, sans-serif;letter-spacing: 1pt;position:absolute;bottom:-2px;right:20px;}
+h1.title .tagline {color:red;font: 16px/18px 'Puritan20Normal', Arial, sans-serif;letter-spacing: 1pt;position:absolute;bottom:-2px;right:20px;white-space:nowrap;}
 .title a {text-decoration:none;color:black;}
 
 /* Manifesto */
@@ -58,3 +62,5 @@ ol.commandments {font: 24px/28px 'Puritan20Bold', Arial, sans-serif;}
 #signatories {clear:both;float:left;margin-top:50px;}
 #signatories li {font:18px/20px 'DanielRegular', Arial, sans-serif;}
 #signatories .backToTop {display:block;margin-bottom:120px;}
+
+#attributions, #attributions * {font:10px/10px 'Puritan20Normal', Arial, sans-serif;color:black;text-decoration:none;}
