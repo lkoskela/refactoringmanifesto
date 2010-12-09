@@ -10,6 +10,7 @@ log = File.new("sinatra.log", "a")
 STDOUT.reopen(log)
 STDERR.reopen(log)
 
-require 'application'
+require './application'
 
 run Sinatra::Application
+
