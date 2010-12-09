@@ -5,18 +5,6 @@ describe "The Refactoring Manifesto" do
   include Rack::Test::Methods
   def app; @app ||= Sinatra::Application ; end
 
-  before(:all) do
-  end
-
-  after(:all) do
-  end
-
-  before(:each) do
-  end
-
-  after(:each) do
-  end
-
   it "should respond to /" do
     get '/'
     last_response.should be_ok
