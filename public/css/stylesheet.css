@@ -40,7 +40,7 @@
 #signing .callToSignUp a.signUpLink {font-weight:bold;}
 
 /* Authors */
-#authors {font: 16/20px 'DanielRegular', Arial, sans-serif;clear:both;}
+#authors {font: 20px/24px 'DanielRegular', Arial, sans-serif;clear:both;}
 #authors li {display:block;float:right;margin-right:30px;white-space:nowrap;}
 
 /* Page template */
