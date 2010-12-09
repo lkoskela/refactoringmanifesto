@@ -36,7 +36,7 @@
 /* Orphan styles that smell like they need... REFACTORING! */
 .callToAction {font:18px/27px 'Puritan20Bold', Arial, sans-serif; color: red; float:left;}
 #signing {position:relative;margin-top: 50px;margin-bottom: 60px;font:18px/24px 'Puritan20Normal', Arial, sans-serif;}
-#signing .callToSignUp {color:black;float:left;margin-top:50px;margin-bottom:100px;}
+#signing .callToSignUp {color:black;float:left;margin-top:50px;margin-bottom:100px;text-align:justify;}
 #signing .callToSignUp a.signUpLink {font-weight:bold;}
 
 /* Authors */
@@ -50,7 +50,7 @@ h1.title .tagline {color:red;font: 16px/18px 'Puritan20Normal', Arial, sans-seri
 
 /* Manifesto */
 ol.commandments {font: 24px/28px 'Puritan20Bold', Arial, sans-serif;}
-.commandments li {margin: 20px 0px 12px 0px;}
+.commandments li {margin: 20px 0px 12px 0px;text-align:justify;}
 .commandments li .explanation {display:block;font: 18px/20px 'Puritan20Bold', Arial, sans-serif;margin-top:8px;}
 .commandments li .commandment {display:block;}
 .commandments b {font-family: 'Puritan20Normal', Arial, sans-serif; font-weight: normal;}
