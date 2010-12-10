@@ -1,5 +1,4 @@
 require File.dirname(__FILE__) + '/spec_helper'
-require 'encoding/character/utf-8'
 
 describe "The Refactoring Manifesto" do
   include Rack::Test::Methods
@@ -19,8 +18,8 @@ describe "The Refactoring Manifesto" do
     get '/'
     manifesto = YAML.load_file(File.join(File.dirname(__FILE__), '..', 'lib', 'manifesto.yml'))
     manifesto.each do |c|
-      heading = u c['commandment']
-      explanation = u c['explanation']
+      heading = c['commandment']
+      explanation = c['explanation']
       last_response.body.should include heading
       last_response.body.should include explanation
     end
