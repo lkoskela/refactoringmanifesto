@@ -8,3 +8,9 @@ $(function(){
 		$('input[autofocus=true]' ).focus();
 	}
 });
+
+$(document).read(function() {
+  $('#signup_button').click(function() {
+    $('#signup_form').submit();
+  });
+};
