@@ -1,3 +1,10 @@
+before do
+  headers 'Content-Type' => "text/html;charset=utf-8",
+      'Pragma' => 'no-cache',
+      'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
+      'Last-Modified' => Time.now.httpdate
+end
+
 get '/' do
   @number_of_signatories = Signatory.count
   @manifesto = Manifesto.commandments
