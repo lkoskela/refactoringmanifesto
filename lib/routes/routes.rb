@@ -21,5 +21,5 @@ post '/signatories' do
   new_signatory.save
   @added = new_signatory.name
   @signatories = Signatory.all(:order => [ :created_at.desc ])
-  erb :signatories
+  redirect '/signatories'
 end

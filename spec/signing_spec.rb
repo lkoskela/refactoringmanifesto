@@ -13,6 +13,12 @@ describe "Signing the manifesto" do
     signatory.created_at.should be_between(timestamp_before - 1, DateTime.now + 1)
   end
 
+  it "should redirect after post to avoid accidental duplicates" do
+    post '/signatories', params={:name => 'somebody'}
+    last_response.redirect?.should == true
+    last_response.location.should =~ /\/signatories$/
+  end
+
   it "should mention the number of signatories to date" do
     quoted_signatories_to_date_should_be 0
     sign_up "Jane Doe", "Jim Doe"
