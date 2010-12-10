@@ -6,8 +6,9 @@
 		To date, a total of <%= @signatories.size %> people have signed this manifesto. We have done so to voice our concern over the state of practice and our passion towards the profession of software development. We want to feel proud of our work and see our products stand the test of time, serving their users and developers alike.
 	</div>
 	<div class="signUpForm">
-		<form method="POST" action="">
-			<input class="text" type="text" name="name" placeholder="enter your name to sign the manifesto" autofocus="true" /> <input type="button" name="sign" value="sign!" id="sign_button" />
+		<form id="signup_form" method="post" action="/signatories">
+			<input class="text" type="text" name="name" />
+			<input type="submit" name="sign" value="sign!" id="signup_button" />
 		</form>
 		<% if @added %>
 		<div class="uxFeedback">Thanks for joining us. Your name, '<%= @added %>' will be listed among our signatories shortly.</div>
