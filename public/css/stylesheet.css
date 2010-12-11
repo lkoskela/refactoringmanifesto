@@ -22,6 +22,14 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'JournalRegular';
+	src: url('../fonts/journal-webfont.eot');
+	src: local('☺'), url('../fonts/journal-webfont.woff') format('woff'), url('../fonts/journal-webfont.ttf') format('truetype'), url('../fonts/journal-webfont.svg#webfontlL8SNmS2') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Regular CSS styles from now on... */
 
 #content {
@@ -60,7 +68,7 @@ ol.commandments {font: 24px/28px 'Puritan20Bold', Arial, sans-serif;}
 #signing input {font:18px/24px 'Puritan20Normal', Arial, sans-serif;}
 #signing input.text {width: 400px;}
 #signatories {clear:both;float:left;margin-top:50px;}
-#signatories li {font:18px/20px 'DanielRegular', Arial, sans-serif;}
+#signatories li {font:28px/37px 'JournalRegular', Arial, sans-serif;}
 #signatories .backToTop {display:block;margin-bottom:120px;}
 
 #attributions, #attributions * {font:10px/10px 'Puritan20Normal', Arial, sans-serif;color:black;text-decoration:none;}
