@@ -18,8 +18,8 @@
 <div id="signatories">
 	<h2>The following people have signed this manifesto:</h2>
 	<ol class="signatories">
-		<% @signatories.each do |s| %>
-		<li><span class="signatoryName"><%= s.name %></span> <span class="signatoryDate">signed on <%= s.created_at.strftime('%B %d, %Y') %></span></li>
+		<% @signatories.each_with_index do |signee, index| %>
+		<li value="<%= @signatories.size - index %>"><span class="signatoryName"><%= signee.name %></span> <span class="signatoryDate">signed on <%= signee.created_at.strftime('%B %d, %Y') %></span></li>
 		<% end %>
 	</ol>
 	<a class="backToTop" href="#top">Back to top</a>
