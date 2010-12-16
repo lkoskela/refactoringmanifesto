@@ -1,0 +1,3 @@
+[ ] Remove duplicate names that were submitted only a few seconds apart.
+[ ] Don't allow empty names.
+[ ] Implement a mechanism for cleaning up duplicate (or spam) signees.
