@@ -24,3 +24,15 @@ RSpec.configure do |config|
   config.after(:each) {}
 end
 
+# define helper methods (typically assertions)
+
+def should_have_redirected_to(regex)
+  last_response.redirect?.should == true
+  last_response.location.should =~ regex
+end
+
+def quoted_signatories_to_date_should_be(expected_number)
+  get '/signatories'
+  last_response.body.should include "total of #{expected_number} people"
+  Signatory.all.size.should == expected_number
+end

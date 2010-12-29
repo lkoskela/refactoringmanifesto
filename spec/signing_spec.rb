@@ -15,8 +15,7 @@ describe "Signing the manifesto" do
 
   it "should redirect after post to avoid accidental duplicates" do
     post '/signatories', params={:name => 'somebody'}
-    last_response.redirect?.should == true
-    last_response.location.should =~ /\/signatories$/
+    should_have_redirected_to /\/signatories$/
   end
 
   it "should mention the number of signatories to date" do
@@ -40,9 +39,4 @@ def sign_up(*names)
     Signatory.create(:name => name, :created_at => DateTime.now)
   end
   names
-end
-
-def quoted_signatories_to_date_should_be(expected_number)
-  get '/'
-  last_response.body.should include "total of #{expected_number} people"
 end
