@@ -11,15 +11,26 @@ get '/' do
   erb :manifesto
 end
 
-get '/signatories' do
+get '/signatories/?' do
   @signatories = Signatory.all(:order => [ :created_at.desc ])
   erb :signatories
 end
 
-post '/signatories' do
+post '/signatories/?' do
   new_signatory = Signatory.new(:name => params['name'], :created_at => DateTime.now)
   new_signatory.save
   @added = new_signatory.name
   @signatories = Signatory.all(:order => [ :created_at.desc ])
   redirect '/signatories'
+end
+
+get '/admin/?' do
+  @signatories = Signatory.all(:order => [ :created_at.desc ])
+  erb :admin
+end
+
+get '/admin/destroy/:id' do |id|
+  signatory = Signatory.get(id)
+  signatory.destroy unless signatory.nil?
+  redirect '/admin'
 end

@@ -1,0 +1,16 @@
+<div id="admin">
+	<h2>Manifesto Administration</h2>
+	<div class="callToSignUp">
+		The following <%= @signatories.size %> people have signed this manifesto:
+	</div>
+	<ol class="signatories">
+		<% @signatories.each_with_index do |signee, index| %>
+		<li value="<%= @signatories.size - index %>">
+			<span class="signatoryName">"<%= signee.name %>"</span>
+			<span class="signatoryDate"><%= signee.created_at.strftime('%Y-%m-%d %H:%M:%S') %></span>
+			<a class="delete" href="/admin/destroy/<%= signee.id %>"><span>wipe</span></a>
+		</li>
+		<% end %>
+	</ol>
+	<a class="backToTop" href="#top">Back to top</a>
+</div>
