@@ -1,4 +1,5 @@
 enable :sessions
+use Rack::Flash
 
 before do
   headers 'Content-Type' => "text/html;charset=utf-8",
@@ -24,9 +25,13 @@ get '/signatories/?' do
 end
 
 post '/signatories/?' do
-  new_signatory = Signatory.new(:name => params['name'], :created_at => DateTime.now)
-  new_signatory.save
-  @added = new_signatory.name
+  name = params['name']
+  new_signatory = Signatory.create(:name => name, :created_at => DateTime.now)
+  if new_signatory.errors.empty?
+    @added = new_signatory.name
+  else
+    flash[:error] = new_signatory.errors.first
+  end
   @signatories = Signatory.all(:order => [ :created_at.desc ])
   redirect '/signatories'
 end

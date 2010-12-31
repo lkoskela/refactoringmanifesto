@@ -10,12 +10,6 @@ describe "Admin page" do
     User.register(@admin_username, @admin_password)
   end
   
-  before(:each) do
-    @john, @jane, @jim = ["John", "Jane", "Jim"].collect do |name|
-      Signatory.create(:name => name, :created_at => DateTime.now)
-    end
-  end
-  
   def log_in(username = @admin_username, password = @admin_password)
     post '/login', { :username => username, :password => password }
   end
@@ -24,15 +18,22 @@ describe "Admin page" do
     before(:each) do
       log_in
     end
+  
+    before(:each) do
+      @john, @jane, @jim = ["John", "Jane", "Jim"].collect do |name|
+        Signatory.create(:name => name, :created_at => DateTime.now)
+      end
+      @signatories_before = Signatory.all.size
+    end
 
     it "should mention the number of signatories to date" do
       get '/admin'
-      quoted_signatories_to_date_should_be 3
+      quoted_signatories_to_date_should_be @signatories_before
     end
 
     it "should list the signatories" do
       get '/admin'
-      [@john, @jane, @jim].each do |s|
+      Signatory.all.each do |s|
         last_response.body.should include s.name
       end
     end
@@ -40,7 +41,7 @@ describe "Admin page" do
     it "should delete signatories" do
       get "/admin/destroy/#{@jane.id}"
       Signatory.get(@jane.id).should == nil
-      quoted_signatories_to_date_should_be 2
+      quoted_signatories_to_date_should_be(@signatories_before - 1)
     end
 
     it "should redirect back to original URL after delete" do

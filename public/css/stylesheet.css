@@ -78,7 +78,7 @@ ol.commandments {font: 24px/28px 'Puritan20Bold', Arial, sans-serif;}
 #signatories {clear:both;float:left;margin-top:50px;}
 #signatories li {font:20px/26px 'NotethisRegular', Arial, sans-serif;}
 #signatories .backToTop {display:block;margin-bottom:120px;}
-
+.error {color:#f44;}
 #attributions, #attributions * {font:10px/10px 'Puritan20Normal', Arial, sans-serif;color:black;text-decoration:none;}
 
 /* Administration */

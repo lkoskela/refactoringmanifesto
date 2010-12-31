@@ -3,9 +3,11 @@ require 'bundler'
 Bundler.setup
 
 require 'sinatra'
+require 'rack-flash'
 require 'erb'
-require "dm-core"
+require 'dm-core'
 require 'dm-migrations'
+require 'dm-validations'
 
 require File.join(File.dirname(__FILE__), 'db', 'config.rb')
 

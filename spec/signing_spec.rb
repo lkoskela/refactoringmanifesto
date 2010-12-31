@@ -17,6 +17,15 @@ describe "Signing the manifesto" do
     post '/signatories', params={:name => 'somebody'}
     should_have_redirected_to /\/signatories$/
   end
+  
+  ['', '  ', '\t', 'abc'].each do |name|
+    it "should reject '#{name}' as a signee name" do
+      post '/signatories', params={:name => name}
+      follow_redirect!
+      Signatory.all.size.should == 0
+      last_response.body.should have_tag(".error")
+    end
+  end
 
   it "should mention the number of signatories to date" do
     quoted_signatories_to_date_should_be 0

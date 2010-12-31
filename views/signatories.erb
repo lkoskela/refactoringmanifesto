@@ -10,6 +10,13 @@
 			<input class="text" type="text" name="name" />
 			<input type="submit" name="sign" value="sign!" id="signup_button" />
 		</form>
+		<% if flash.has?(:error) %>
+			<ul class="error">
+				<% flash[:error].each do |e| %>
+				<li><%= e %></li>
+				<% end %>
+			</ul>
+		<% end %>
 		<% if @added %>
 		<div class="uxFeedback">Thanks for joining us. Your name, '<%= @added %>' will be listed among our signatories shortly.</div>
 		<% end %>

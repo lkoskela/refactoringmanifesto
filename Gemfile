@@ -11,6 +11,8 @@ group :test do
 end
 
 gem 'sinatra'  #, :git => 'git://github.com/sinatra/sinatra.git'
+gem 'rack-flash'
 gem 'dm-core'
 gem 'dm-sqlite-adapter'
 gem 'dm-migrations'
+gem 'dm-validations'

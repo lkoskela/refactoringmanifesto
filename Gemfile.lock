@@ -29,6 +29,8 @@ GEM
     dm-sqlite-adapter (1.0.2)
       dm-do-adapter (~> 1.0.2)
       do_sqlite3 (~> 0.10.2)
+    dm-validations (1.0.2)
+      dm-core (~> 1.0.2)
     do_sqlite3 (0.10.2)
       data_objects (= 0.10.2)
     extlib (0.9.15)
@@ -43,6 +45,8 @@ GEM
     mime-types (1.16)
     nokogiri (1.4.4)
     rack (1.2.1)
+    rack-flash (0.1.1)
+      rack
     rack-test (0.5.5)
       rack (>= 1.0)
     rake (0.8.7)
@@ -79,8 +83,10 @@ DEPENDENCIES
   dm-core
   dm-migrations
   dm-sqlite-adapter
+  dm-validations
   fuubar
   hpricot
+  rack-flash
   rack-test
   rcov
   rspec
