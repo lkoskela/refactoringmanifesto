@@ -1,8 +1,15 @@
+enable :sessions
+
 before do
   headers 'Content-Type' => "text/html;charset=utf-8",
       'Pragma' => 'no-cache',
       'Cache-Control' => 'no-store, no-cache, must-revalidate, max-age=0',
       'Last-Modified' => Time.now.httpdate
+end
+
+before /\/admin.*/ do
+  session[:last_requested_protected_path] = request.path_info
+  redirect '/login' if session[:user].nil?
 end
 
 get '/' do
@@ -24,8 +31,25 @@ post '/signatories/?' do
   redirect '/signatories'
 end
 
+get '/login/?' do
+  erb :login
+end
+
+get '/logout/?' do
+  session[:user] = nil
+  redirect '/admin'
+end
+
+post '/login/?' do
+  session[:user] = Authentication.authenticate(params['username'], params['password'])
+  redirect '/login' if session[:user].nil?
+  @user = session[:user]
+  redirect session[:last_requested_protected_path] ||= '/admin'
+end
+
 get '/admin/?' do
   @signatories = Signatory.all(:order => [ :created_at.desc ])
+  @user = session[:user]
   erb :admin
 end
 

@@ -22,6 +22,9 @@ RSpec.configure do |config|
   }
   config.after(:all) {}
   config.after(:each) {}
+  
+  require 'rspec_hpricot_matchers'
+  config.include(RspecHpricotMatchers)
 end
 
 # define helper methods (typically assertions)

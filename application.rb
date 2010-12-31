@@ -18,4 +18,8 @@ Dir.glob("#{model_dir}/*.rb") do |file|
 end
 
 require File.join(File.dirname(__FILE__), 'lib', 'manifesto.rb')
+require File.join(File.dirname(__FILE__), 'lib', 'authentication.rb')
 require File.join(File.dirname(__FILE__), 'lib', 'routes', 'routes.rb')
+
+mime_type :ttf, "application/octet-stream"
+mime_type :woff, "application/octet-stream"
