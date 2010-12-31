@@ -5,7 +5,6 @@ group :test do
   gem 'rspec'
   gem 'rspec_hpricot_matchers'
   gem 'hpricot'
-  gem 'capybara'
   gem 'rcov'
   gem 'fuubar'
 end
