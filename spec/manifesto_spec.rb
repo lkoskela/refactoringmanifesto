@@ -20,8 +20,8 @@ describe "The Refactoring Manifesto" do
     manifesto.each do |c|
       heading = c['commandment']
       explanation = c['explanation']
-      last_response.body.should include heading
-      last_response.body.should include explanation
+      last_response.body.force_encoding("UTF-8").should include heading
+      last_response.body.force_encoding("UTF-8").should include explanation
     end
   end
 
