@@ -12,3 +12,10 @@ namespace :spec do
   end
 end
 
+namespace :db do
+  desc "Register an admin user (from environment variables USERNAME and PASSWORD)"
+  task :register_user do |t|
+    require 'application'
+    User.register(ENV['USERNAME'], ENV['PASSWORD'])
+  end
+end
