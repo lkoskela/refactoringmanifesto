@@ -7,6 +7,7 @@ require 'sinatra'
 require 'rack/test'
 require 'rspec'
 require 'rspec/autorun'
+require 'webrat'
 
 # set test environment
 set :environment, :test
@@ -22,9 +23,6 @@ RSpec.configure do |config|
   }
   config.after(:all) {}
   config.after(:each) {}
-  
-  require 'rspec_hpricot_matchers'
-  config.include(RspecHpricotMatchers)
 end
 
 # define helper methods (typically assertions)

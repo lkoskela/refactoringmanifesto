@@ -25,7 +25,7 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.1.4)
       ruby-progressbar (~> 0.0.9)
-    hpricot (0.6.164)
+    nokogiri (1.4.4)
     rack (1.2.1)
     rack-flash (0.1.1)
       rack
@@ -41,12 +41,15 @@ GEM
       diff-lcs (~> 1.1.2)
     rspec-instafail (0.1.5)
     rspec-mocks (2.1.0)
-    rspec_hpricot_matchers (1.0)
     ruby-progressbar (0.0.9)
     sinatra (1.1.0)
       rack (~> 1.1)
       tilt (~> 1.1)
     tilt (1.1)
+    webrat (0.7.2)
+      nokogiri (>= 1.2.0)
+      rack (>= 1.0)
+      rack-test (>= 0.5.3)
 
 PLATFORMS
   ruby
@@ -57,10 +60,9 @@ DEPENDENCIES
   dm-sqlite-adapter
   dm-validations
   fuubar
-  hpricot
   rack-flash
   rack-test
   rcov
   rspec
-  rspec_hpricot_matchers
   sinatra
+  webrat

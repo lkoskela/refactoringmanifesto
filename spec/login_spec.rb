@@ -2,6 +2,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 
 describe "Login page" do
   include Rack::Test::Methods
+  include Webrat::Matchers
 
   def app
     @app ||= Sinatra::Application
@@ -19,8 +20,8 @@ describe "Login page" do
   end
   
   it "should render a login form for GET requests" do
-    last_response.body.should have_tag("//form//input[@name='username']")
-    last_response.body.should have_tag("//form//input[@name='password']")
+    last_response.body.should have_xpath("//form//input[@name='username']")
+    last_response.body.should have_xpath("//form//input[@name='password']")
   end
   
   it "should reject authentication with missing username" do

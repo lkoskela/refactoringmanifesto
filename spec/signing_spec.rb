@@ -2,6 +2,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 
 describe "Signing the manifesto" do
   include Rack::Test::Methods
+  include Webrat::Matchers
   def app; @app ||= Sinatra::Application ; end
 
   it "should add the signatory to the database" do
@@ -23,7 +24,7 @@ describe "Signing the manifesto" do
       post '/signatories', params={:name => name}
       follow_redirect!
       Signatory.all.size.should == 0
-      last_response.body.should have_tag(".error")
+      last_response.body.should have_selector(".error")
     end
   end
 

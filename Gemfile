@@ -3,8 +3,7 @@ source "http://rubygems.org"
 group :test do
   gem 'rack-test'
   gem 'rspec'
-  gem 'rspec_hpricot_matchers'
-  gem 'hpricot'
+  gem 'webrat'
   gem 'rcov'
   gem 'fuubar'
 end
