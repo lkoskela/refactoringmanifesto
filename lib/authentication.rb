@@ -9,9 +9,9 @@ module Authentication
     return user if user.authenticate(password)
     if block_given?
       if user.is_a? UnknownUser
-        yield "No such user"
+        yield "No such user: #{username}"
       else
-        yield "Wrong password"
+        yield "Wrong password for #{username}"
       end
     end
     return user

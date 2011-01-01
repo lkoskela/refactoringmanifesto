@@ -12,7 +12,7 @@ class User
   end
   
   def authenticate(password)
-    Log.info "Trying to authenticate user '#{username}' with password '#{self.passwd}'"
+    Log.info "Trying to authenticate user '#{username}' with password '#{password}'"
     @has_been_authenticated = (User.mangle(password) == self.passwd)
     @has_been_authenticated
   end
