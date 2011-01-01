@@ -4,13 +4,13 @@ function hasAutofocus() {
 }
 
 $(function(){
-	if(!hasAutofocus()) {
-		$('input[autofocus=true]' ).focus();
+	if (!hasAutofocus()) {
+		$('input[autofocus=true]').focus();
 	}
 });
 
 $(document).read(function() {
-  $('#signup_button').click(function() {
-    $('#signup_form').submit();
-  });
-};
+	$('#signup_button').click(function() {
+		$('#signup_form').submit();
+	});
+});
