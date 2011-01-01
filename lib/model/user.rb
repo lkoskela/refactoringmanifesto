@@ -1,5 +1,4 @@
 require "dm-core"
-require 'sha1'
 
 class User
   include DataMapper::Resource
