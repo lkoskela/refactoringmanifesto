@@ -75,5 +75,6 @@ ol.commandments {font: 24px/28px 'Puritan20Bold', Arial, sans-serif;}
 
 /* Administration */
 #admin .signatories li:hover {background:#ddd;}
+#admin .signatoryName {font: 20px/24px 'NotethisRegular', Arial, sans-serif;}
 a.delete {display:block;float:right;background:url(../images/delete.png) no-repeat;overflow:hidden;height:16px;width:16px;}
 a.delete span {display:none;}
