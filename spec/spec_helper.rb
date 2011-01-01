@@ -25,6 +25,14 @@ RSpec.configure do |config|
   config.after(:each) {}
 end
 
+# environment tests
+
+describe "Runtime environment" do
+  it "should be Ruby 1.9" do
+    RUBY_VERSION.should =~ /^1\.9/
+  end
+end
+
 # define helper methods (typically assertions)
 
 def should_have_redirected_to(regex)
