@@ -10,6 +10,7 @@ require 'dm-migrations'
 require 'dm-validations'
 
 require File.join(File.dirname(__FILE__), 'db', 'config.rb')
+require File.join(File.dirname(__FILE__), 'lib', 'sha1.rb')
 
 model_dir = File.join(File.dirname(__FILE__), 'lib', 'model')
 Dir.glob("#{model_dir}/*.rb") do |file|
