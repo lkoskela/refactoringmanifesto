@@ -25,5 +25,8 @@ require File.join(File.dirname(__FILE__), 'lib', 'manifesto.rb')
 require File.join(File.dirname(__FILE__), 'lib', 'authentication.rb')
 require File.join(File.dirname(__FILE__), 'lib', 'routes', 'routes.rb')
 
+mime_type :otf, "application/octet-stream"
 mime_type :ttf, "application/octet-stream"
-mime_type :woff, "application/octet-stream"
+mime_type :woff, "application/x-woff"
+mime_type :eot, "application/vnd.ms-fontobject"
+mime_type :svg, "image/svg+xml"
