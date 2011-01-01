@@ -19,6 +19,7 @@ Dir.glob("#{model_dir}/*.rb") do |file|
   model_class.auto_migrate! unless model_class.storage_exists?
 end
 
+require File.join(File.dirname(__FILE__), 'lib', 'logging.rb')
 require File.join(File.dirname(__FILE__), 'lib', 'manifesto.rb')
 require File.join(File.dirname(__FILE__), 'lib', 'authentication.rb')
 require File.join(File.dirname(__FILE__), 'lib', 'routes', 'routes.rb')
