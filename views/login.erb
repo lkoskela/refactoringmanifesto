@@ -1,3 +1,11 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#login_form').submit(function() {
+		var passwordField = $('#login_form :password');
+		passwordField.val($.sha1(passwordField.val()));
+	});
+});
+</script>
 <div id="login">
 	<div class="loginForm">
 		<form id="login_form" method="post" action="/login">
