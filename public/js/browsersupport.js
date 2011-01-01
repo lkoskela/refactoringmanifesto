@@ -9,7 +9,7 @@ $(function(){
 	}
 });
 
-$(document).read(function() {
+$(document).ready(function() {
 	$('#signup_button').click(function() {
 		$('#signup_form').submit();
 	});
