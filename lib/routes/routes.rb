@@ -46,8 +46,11 @@ get '/logout/?' do
 end
 
 post '/login/?' do
-  session[:user] = Authentication.authenticate(params['username'], params['password'])
-  redirect '/login' if session[:user].nil?
+  session[:user] = Authentication.authenticate(params['username'], params['password']) do |msg|
+    Log.info msg
+    flash[:error] = [msg]
+  end
+  redirect '/login' unless session[:user].authenticated?
   @user = session[:user]
   redirect session[:last_requested_protected_path] ||= '/admin'
 end

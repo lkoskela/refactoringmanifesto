@@ -27,16 +27,18 @@ describe "Login page" do
   it "should reject authentication with missing username" do
     log_in(username = 'nosuchuser')
     should_have_redirected_to %r{/login$}
+    response_body_after_redirect.should have_xpath("//*[@class='error']")
   end
 
   it "should reject authentication with wrong password" do
     log_in(password = 'wrongpassword')
     should_have_redirected_to %r{/login$}
+    response_body_after_redirect.should have_xpath("//*[@class='error']")
   end
   
   it "should accept authentication with correct credentials" do
     log_in
     should_have_redirected_to %r{/admin$}
+    response_body_after_redirect.should_not have_selector(".error")
   end
-
 end

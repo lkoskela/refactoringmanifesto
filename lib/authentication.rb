@@ -1,11 +1,19 @@
 module Authentication
   class UnknownUser < User
     def authenticate(password); false; end
+    def authenticated?; false; end
   end
   
-  def self.authenticate(username, password)
+  def self.authenticate(username, password, &block)
     user = User.first(:username => username) || UnknownUser.new
     return user if user.authenticate(password)
-    nil
+    if block_given?
+      if user.is_a? UnknownUser
+        yield "No such user"
+      else
+        yield "Wrong password"
+      end
+    end
+    return user
   end
 end

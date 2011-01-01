@@ -1,4 +1,5 @@
 require "dm-core"
+require 'digest/sha1'
 
 class User
   include DataMapper::Resource
@@ -11,10 +12,18 @@ class User
   end
   
   def authenticate(password)
-    User.mangle(password) == self.passwd
+    Log.info "Trying to authenticate user '#{username}' with password '#{self.passwd}'"
+    @has_been_authenticated = (User.mangle(password) == self.passwd)
+    @has_been_authenticated
+  end
+  
+  def authenticated?
+    @has_been_authenticated ||= false
   end
   
   def self.mangle(password)
-    password.reverse
+    hash = Digest::SHA1.new
+    hash.update(password)
+    hash.hexdigest
   end
 end

@@ -40,6 +40,11 @@ def should_have_redirected_to(regex)
   last_response.location.should =~ regex
 end
 
+def response_body_after_redirect
+  follow_redirect!
+  last_response.body
+end
+
 def quoted_signatories_to_date_should_be(expected_number)
   get '/signatories'
   last_response.body.should include "total of #{expected_number} people"

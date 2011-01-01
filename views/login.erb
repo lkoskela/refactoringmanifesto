@@ -7,5 +7,12 @@
 			<input class="text" type="password" name="password" />
 			<input type="submit" name="login" value="login" id="login_button" />
 		</form>
+		<% if flash.has?(:error) %>
+			<ul class="error">
+				<% flash[:error].each do |e| %>
+				<li><%= e %></li>
+				<% end %>
+			</ul>
+		<% end %>
 	</div>
 </div>
