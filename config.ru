@@ -8,9 +8,9 @@ set :raise_errors, true
 set :views, 'views'
 set :logging, true
 
-log = File.new("sinatra.log", "a+")
-STDOUT.reopen(log)
-STDERR.reopen(log)
+#log = File.new("sinatra.log", "a+")
+#STDOUT.reopen(log)
+#STDERR.reopen(log)
 
 require './application'
 
