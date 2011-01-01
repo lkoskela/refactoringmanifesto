@@ -11,7 +11,7 @@ describe "Admin page" do
   end
   
   def log_in(username = @admin_username, password = @admin_password)
-    post '/login', { :username => username, :password => password }
+    post '/login', { :username => username, :password => SHA1.hash(password) }
   end
   
   describe "with an authenticated user" do
