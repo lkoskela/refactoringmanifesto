@@ -13,7 +13,7 @@ namespace :spec do
 end
 
 namespace :db do
-  desc "Register an admin user (from environment variables USERNAME and PASSWORD)"
+  desc "Register an admin user (rake db:register_user USERNAME=admin PASSWORD=secret RACK_ENV=production)"
   task :register_user do |t|
     require './application.rb'
     User.register(ENV['USERNAME'], ENV['PASSWORD'])
