@@ -1,3 +1,5 @@
 [ ] Remove duplicate names that were submitted only a few seconds apart.
-[ ] Don't allow empty names.
-[ ] Implement a mechanism for cleaning up duplicate (or spam) signees.
+[ ] Validate signees' names for URL's.
+[ ] Record signees' IP addresses for later use.
+[ ] Send an email to administrators every 12/24 hours listing the new signees and providing direct links for removing those entries.
+[ ] Hide removed signatures instead of physically deleting them from the database.
