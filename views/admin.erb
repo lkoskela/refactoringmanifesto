@@ -1,6 +1,8 @@
 <div id="admin">
 	<h2>Manifesto Administration</h2>
-	Logged in as <%= @user.username %><a href="/logout">Log out</a>
+	<span class="loginInformation">
+		Logged in as <%= @user.username %> | <a href="/logout">Log out</a>
+	</span>
 	<div class="callToSignUp">
 		The following <%= @signatories.size %> people have signed this manifesto:
 	</div>
