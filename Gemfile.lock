@@ -2,6 +2,11 @@ GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.2.2)
+    configatron (2.6.4)
+      yamler (>= 0.1.0)
+    cover_me (1.0.0.rc4)
+      configatron
+      hashie
     data_objects (0.10.2)
       addressable (~> 2.1)
     diff-lcs (1.1.2)
@@ -25,13 +30,13 @@ GEM
       rspec (~> 2.0)
       rspec-instafail (~> 0.1.4)
       ruby-progressbar (~> 0.0.9)
+    hashie (0.3.0)
     nokogiri (1.4.4)
     rack (1.2.1)
     rack-flash (0.1.1)
       rack
     rack-test (0.5.7)
       rack (>= 1.0)
-    rcov (0.9.9)
     rspec (2.4.0)
       rspec-core (~> 2.4.0)
       rspec-expectations (~> 2.4.0)
@@ -50,19 +55,21 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
+    yamler (0.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  cover_me (>= 1.0.0.rc4)
   dm-core
   dm-migrations
   dm-sqlite-adapter
   dm-validations
   fuubar
+  hashie (= 0.3.0)
   rack-flash
   rack-test
-  rcov
   rspec
   sinatra
   webrat

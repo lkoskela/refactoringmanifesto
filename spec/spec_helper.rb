@@ -1,8 +1,10 @@
+require 'rubygems'
+require 'bundler'
+require 'cover_me'
+
 ENV['RACK_ENV'] = 'test'
 require File.join(File.dirname(__FILE__), '..', 'application.rb')
 
-require 'rubygems'
-require 'bundler'
 require 'sinatra'
 require 'rack/test'
 require 'rspec'
