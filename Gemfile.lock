@@ -4,7 +4,7 @@ GEM
     addressable (2.2.2)
     configatron (2.6.4)
       yamler (>= 0.1.0)
-    cover_me (1.0.0.rc4)
+    cover_me (1.0.0.rc5)
       configatron
       hashie
     data_objects (0.10.2)
@@ -61,7 +61,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cover_me (>= 1.0.0.rc4)
+  cover_me (>= 1.0.0.rc5)
   dm-core
   dm-migrations
   dm-sqlite-adapter

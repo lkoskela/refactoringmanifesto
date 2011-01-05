@@ -4,7 +4,7 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'webrat'
-  gem 'cover_me', '>= 1.0.0.rc4'
+  gem 'cover_me', '>= 1.0.0.rc5'
   gem 'hashie', '= 0.3.0'
   gem 'fuubar'
 end
