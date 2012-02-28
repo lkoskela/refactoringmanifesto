@@ -19,13 +19,20 @@ describe "Signing the manifesto" do
     should_have_redirected_to /\/signatories$/
   end
   
-  ['', '  ', '\t', 'abc'].each do |name|
-    it "should reject '#{name}' as a signee name" do
-      post '/signatories', params={:name => name}
-      follow_redirect!
-      Signatory.all.size.should == 0
-      last_response.body.should have_selector(".error")
-    end
+  it "should reject signee names shorter than 2 characters" do
+    should_reject_signee_name "A"
+  end
+  
+  it "should accept signee names of at least 2 non-whitespace characters" do
+    should_accept_signee_name "AB"
+    should_accept_signee_name "ABC"
+  end
+  
+  it "should reject all-whitespace names for a signee" do
+    should_reject_signee_name "   "
+    should_reject_signee_name "\t\t\t"
+    should_reject_signee_name "\t \t \t "
+    should_reject_signee_name "\n\n\n"
   end
 
   it "should mention the number of signatories to date" do
@@ -49,4 +56,20 @@ def sign_up(*names)
     Signatory.create(:name => name, :created_at => DateTime.now)
   end
   names
+end
+
+def should_reject_signee_name(name)
+  signatories_before = Signatory.all.size
+  post '/signatories', params={:name => name}
+  follow_redirect!
+  Signatory.all.size.should == signatories_before
+  last_response.body.should have_selector(".error")
+end
+
+def should_accept_signee_name(name)
+  signatories_before = Signatory.all.size
+  post '/signatories', params={:name => name}
+  follow_redirect!
+  Signatory.all.size.should == signatories_before + 1
+  last_response.body.should_not have_selector(".error")
 end
