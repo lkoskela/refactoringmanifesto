@@ -8,6 +8,7 @@ group :test do
   gem 'fuubar'
 end
 
+gem 'rake'
 gem 'sinatra'  #, :git => 'git://github.com/sinatra/sinatra.git'
 gem 'rack-flash'
 gem 'dm-core'

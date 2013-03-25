@@ -31,6 +31,7 @@ GEM
       rack
     rack-test (0.5.7)
       rack (>= 1.0)
+    rake (10.0.3)
     rcov (0.9.9)
     rspec (2.4.0)
       rspec-core (~> 2.4.0)
@@ -62,6 +63,7 @@ DEPENDENCIES
   fuubar
   rack-flash
   rack-test
+  rake
   rcov
   rspec
   sinatra
