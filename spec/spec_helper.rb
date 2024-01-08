@@ -28,8 +28,8 @@ end
 # environment tests
 
 describe "Runtime environment" do
-  it "should be Ruby 2.6.3" do
-    RUBY_VERSION.should =~ /^2\.6\.3/
+  it "should be Ruby 2.7" do
+    RUBY_VERSION.should =~ /^2\.7/
   end
 end
 
