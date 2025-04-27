@@ -8,7 +8,7 @@ group :test do
   gem 'fuubar'
 end
 
-gem 'nokogiri',  '=1.11.7'
+gem 'nokogiri',  '1.18.8'
 gem 'rake'
 gem 'sinatra'  #, :git => 'git://github.com/sinatra/sinatra.git'
 gem 'rack-flash3'
